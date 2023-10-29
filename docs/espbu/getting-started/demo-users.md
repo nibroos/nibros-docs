@@ -1,9 +1,13 @@
 # Demo (Users)
 
-There are 11 roles in this application. By default, all the user's password is <br>
+Last updated database is around **26 October 2023**. There are 11 roles in this application. By default, all the user's password is <br>
 ```
-password
+ESPBUPassword1!
 ```
+
+Feel free to try anything in the demo server: [https://espbu.nibross.com](https://espbu.nibross.com/)
+
+Production server: [https://espbu.undip.id](https://espbu.undip.id/)
 
 ## Username
 

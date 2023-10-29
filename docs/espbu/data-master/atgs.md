@@ -24,7 +24,7 @@ GET /atgs
 
 | Name | Type | Description |
 | --------- | ---- | ----------- |
-| page | integer | The page number to get. |
+| page | int | The page number to get. |
 | search_fuel | int | The fuel id to search. |
 | search_machine | int | The machine id to search. |
 | search_tank | int | The tank id to search. |

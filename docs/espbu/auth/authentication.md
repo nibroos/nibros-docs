@@ -4,10 +4,27 @@ import PrefixComponent from '../../components/PrefixComponent.vue'
 
 # Authentication
 
-E-SPBU API uses bearer tokens in most of API requests. In order to get the token, user must be authenticated. This app uses built-in package [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum).
+This app uses bearer tokens in most of API requests. In order to get the token, user must be authenticated. This app uses built-in package [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum).
 
 ::: info
 <PrefixComponent/>
+:::
+
+## Preview Login Result
+
+Every role has its own landing page. In this case, I'll take an example from a user with `Super Admin` role.
+
+::: details Preview video
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/D6BhXi4PaV8?si=APtsCmEm3ZM6KBbm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+:::
+
+## Preview Logout Result
+
+The logout process will delete the token from the database.
+
+::: details Preview video
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/81uq-k22q7g?si=4K6NcnisVd3oWGv7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 :::
 
 ## Login Endpoint
@@ -496,9 +513,6 @@ onMounted(() => {
 ```
 :::
 
-::: details Preview
-![Login success](https://github.com/nibroos/nibros-portfolio/assets/73767596/a641d13a-4749-45d6-ad83-3c1619c10f0b)
-:::
 
 
 ## Logout FE Implementation
@@ -510,7 +524,7 @@ onMounted(() => {
 ::: details Can get triggered by
 - Clicking the logout button
 - Token expired
-- Role is not allowed
+- Role is not allowed to access the web
 :::
 
 ::: details Click to view code details
@@ -565,11 +579,5 @@ const {
 // ..
 </script>
 ```
-
-:::
-
-::: details Preview
-
-![Logout attempt](https://github.com/nibroos/nibros-portfolio/assets/73767596/71e12242-e8dd-4350-a908-a873976022c2)
 
 :::

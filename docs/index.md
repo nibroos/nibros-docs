@@ -11,9 +11,6 @@ hero:
     - theme: brand
       text: Get Started
       link: /about
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/nibroos/nibros-portfolio
 
 # Features section
 features:
@@ -24,12 +21,17 @@ features:
   - icon: 💸
     title: Koperasi Multiasa
     details: Cooperation transaction control
-    link: /koperasi-multiasa/
+    link: /koperasi-multiasa/getting-started/introduction
   - icon:
       src: /logo.svg
     title: Portfolio
     details: An nuxt portfolio
-    link: /portfolio/
+    link: /portfolio/getting-started/introduction
+  - icon:
+      src: 📖
+    title: Brodocs
+    details: Personal documentation using vitepress
+    link: /brodocs/getting-started/introduction
 
 # Meta property
 head:

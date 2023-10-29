@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - PHP 8.0.2 or higher
-- Node.js version 8.9 or above
+- Node.js 16 or above
 - MySQL 8.0.2
 - wkhtmltopdf, if export PDF is needed. Take a look at [Laravel Snappy Docs](https://github.com/barryvdh/laravel-snappy)
 

@@ -4,6 +4,8 @@ import PrefixComponent from '../../components/PrefixComponent.vue'
 
 # Pump & ATG Diffs
 
+To get pump & atg differences, you can use this API.
+
 ::: info
 <PrefixComponent/>
 :::

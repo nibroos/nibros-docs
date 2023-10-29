@@ -1,7 +1,9 @@
 {
   "devDependencies": {
+    "flexsearch": "^0.7.31",
     "postcss": "^8.4.31",
     "vitepress": "^1.0.0-rc.22",
+    "vitepress-plugin-search": "^1.0.4-alpha.20",
     "vitepress-sidebar": "^1.18.0"
   },
   "scripts": {

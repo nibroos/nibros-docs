@@ -4,6 +4,8 @@ import PrefixComponent from '../../components/PrefixComponent.vue'
 
 # Employee Performances
 
+Performance of the operator or shift manager can determined by this module. The highest volume and value of fuel sold will get bonus.
+
 ::: info
 <PrefixComponent/>
 :::

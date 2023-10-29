@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { SearchPlugin } from "vitepress-plugin-search";
 import { generateSidebar } from 'vitepress-sidebar';
 
 const espbuSidebar = generateSidebar({
@@ -9,8 +10,8 @@ const espbuSidebar = generateSidebar({
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
-  excludeFiles: ['index.md', 'about.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio'],
+  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -21,9 +22,10 @@ const koperasiMultiasaSidebar = generateSidebar({
   useTitleFromFileHeading: true,
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
-  useFolderLinkFromIndexFile: true,
-  excludeFiles: ['index.md', 'about.md'],
-  excludeFolders: ['espbu', 'portfolio'],
+  useFolderLinkFromIndexFile: false,
+  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFolders: ['espbu', 'portfolio', 'brodocs'],
+  manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
 const portfolioSidebar = generateSidebar({
@@ -33,10 +35,19 @@ const portfolioSidebar = generateSidebar({
   useTitleFromFileHeading: true,
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
-  useFolderLinkFromIndexFile: true,
-  excludeFiles: ['index.md', 'about.md'],
-  excludeFolders: ['espbu', 'koperasi-multiasa'],
+  useFolderLinkFromIndexFile: false,
+  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs'],
+  manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
+
+const options = {
+  previewLength: 62,
+  buttonLabel: "Search",
+  placeholder: "Search docs",
+  allow: [],
+  ignore: [],
+};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -47,13 +58,14 @@ export default defineConfig({
     // Navbar Link
     nav: [
       { text: "About", link: "/about" },
+      { text: "Concepts", link: "/concepts" },
       {
         // Dropdown Menu
         text: "Projects",
         items: [
           { text: "E-SPBU", link: "/espbu/getting-started/introduction.md" },
-          { text: "Koperasi Multiasa", link: "/koperasi-multiasa/" },
-          { text: "Portfolio", link: "/portfolio/" },
+          { text: "Koperasi Multiasa", link: "/koperasi-multiasa/getting-started/introduction.md" },
+          { text: "Portfolio", link: "/portfolio/getting-started/introduction.md" },
         ],
       },
     ],
@@ -82,5 +94,6 @@ export default defineConfig({
       theme: "material-palenight",
       lineNumbers: true,
     },
-  }
+  },
+  vite: { plugins: [SearchPlugin(options)] }
 })

@@ -4,6 +4,12 @@ import PrefixComponent from '../../components/PrefixComponent.vue'
 
 # Oil Movement
 
+To know the stock of fuel in every shift, shift manager must create oil movement report every shift end. This report will be used to calculate the stock of fuel in every tank. 4 main filter to get oil movement report are shift, per-day, date-range, and input. 
+- Shift filter will get the report of oil movement in a shift.
+- Per-day filter will get the report of oil movement in a day. 
+- Date-range filter will get the report of oil movement in a date range.
+- Input filter will get the report of oil movement in a date range that user input.
+
 ::: info
 <PrefixComponent/>
 :::

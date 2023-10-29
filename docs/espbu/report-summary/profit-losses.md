@@ -4,6 +4,8 @@ import PrefixComponent from '../../components/PrefixComponent.vue'
 
 # Profit Losses
 
+This API is used to manage profit losses by month, there are 3 categories of profit losses, namely miscellaneous sales, expenses, and stock losses. The manager should add new profit losses data every month. The data will be used to calculate the profit and loss of the company.
+
 ::: info
 <PrefixComponent/>
 :::

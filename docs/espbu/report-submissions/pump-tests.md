@@ -4,6 +4,8 @@ import PrefixComponent from '../../components/PrefixComponent.vue'
 
 # Pump Tests
 
+Fuel quality is one of the most important things in the fuel business. To ensure the quality of fuel, we need to do a pump test. This module is used to record the pump test.
+
 ::: info
 <PrefixComponent/>
 :::

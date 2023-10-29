@@ -4,6 +4,8 @@ import PrefixComponent from '../../components/PrefixComponent.vue'
 
 # Gross Profit
 
+To know gross profit, this module can be one of the future reference to know the business performance.
+
 ::: info
 <PrefixComponent/>
 :::
