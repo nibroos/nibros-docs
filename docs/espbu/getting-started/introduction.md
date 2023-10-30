@@ -32,9 +32,7 @@ Reports that have been entered, along with additional advanced filters, become s
 
 Understanding the API would be easier if the design is documented. Because it's a team project, we discussed the API design together, every possible scenario, and the best way to implement it in the backend, frontend, database, and android. There are case were features are requested by the client after the API design is finished, so we have to make some changes to the API design. Most of them are not documented, because the time is limited.
 
-You can access the API design spesification below or [live figma preview](https://www.figma.com/file/UbDSQI0uj2vN2A1APNf8zZ/UI%2FUX-SPBU?type=design&node-id=0%3A1&mode=design&t=ZaaayqBPL3g38Z3J-1).
-
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FUbDSQI0uj2vN2A1APNf8zZ%2FUI%252FUX-SPBU%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DZaaayqBPL3g38Z3J-1" allowfullscreen></iframe>
+You can access the API design spesification in [live figma preview](https://www.figma.com/file/UbDSQI0uj2vN2A1APNf8zZ/UI%2FUX-SPBU?type=design&node-id=0%3A1&mode=design&t=ZaaayqBPL3g38Z3J-1).
 
 ## What feature do I like the most?
 

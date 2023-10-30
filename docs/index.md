@@ -28,7 +28,7 @@ features:
     details: An nuxt portfolio
     link: /portfolio/getting-started/introduction
   - icon:
-      src: 📖
+      src: /logo.svg
     title: Brodocs
     details: Personal documentation using vitepress
     link: /brodocs/getting-started/introduction
