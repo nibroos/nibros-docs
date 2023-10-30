@@ -42,6 +42,16 @@ Visit [the State Filter-saving page](/espbu/state-filter-saving) to see more det
 
 As a backend developer, Fuel price is the most challenging feature to implement. Because the fuel price is frequently changing. There are multiple ways to change the fuel price, so I must consider all the possible scenarios, including the human error scenario. The fuel price history also must be changed, because it's important for the audit process and affect the fuel price in the future.
 
+## Contribution
+
+-	Implemented robust authentication and authorization systems, ensuring secure access control.
+-	Designed and implemented user management and shift management features.
+-	Created comprehensive reports, including fund reports, sales reports, stock reports, and summary reports.
+-	Enabled the saving of filters in Vuex state for a more personalized user experience.
+-	Implemented functionality to import & export reports in PDF and Excel formats.
+-	Added thorough validation and verification mechanisms to enhance data integrity and security
+-	Implemented a feature to manage fuel prices, including the ability to change prices in bulk.
+
 ## Technology Stack
 
 ### Frontend
