@@ -1,0 +1,2 @@
+- change name .vitepress to vitepress
+- after push to github, in the local, change to .vitepress

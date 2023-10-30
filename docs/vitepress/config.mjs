@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { SearchPlugin } from "vitepress-plugin-search";
 import { generateSidebar } from 'vitepress-sidebar';
 
 const espbuSidebar = generateSidebar({
@@ -40,14 +39,6 @@ const portfolioSidebar = generateSidebar({
   excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
-
-const options = {
-  previewLength: 62,
-  buttonLabel: "Search",
-  placeholder: "Search docs",
-  allow: [],
-  ignore: [],
-};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -94,6 +85,8 @@ export default defineConfig({
       theme: "material-palenight",
       lineNumbers: true,
     },
+    search: {
+      provider: 'local'
+    }
   },
-  vite: { plugins: [SearchPlugin(options)] }
 })
