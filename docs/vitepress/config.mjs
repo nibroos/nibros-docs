@@ -86,7 +86,12 @@ export default defineConfig({
       lineNumbers: true,
     },
     search: {
-      provider: 'local'
+      provider: 'algolia',
+      options: {
+        appId: '3QNH5695N6',
+        apiKey: 'd6d48db9fb5b66a017cdcbfabd661a39',
+        indexName: 'nibross'
+      }
     }
   },
 })
