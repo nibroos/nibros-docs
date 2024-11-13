@@ -10,16 +10,19 @@ pipeline {
         BUN_INSTALL = credentials('bun-install')
         PATH = "${BUN_INSTALL}/bin:${env.PATH}"
         BUILD_DIR = "build-${env.BUILD_ID}"
+        DOMAIN_URL = credentials('domain-url-nibros-docs')
     }
 
     stages {
-        stage('Checkout') {
+        stage('Checkout and Load Environment Variables') {
             steps {
                 cleanWs()
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
                     sh("mkdir -p ${BUILD_DIR}")
                     dir("${BUILD_DIR}") {
                         sh('git clone ${GIT_REPO} .')
+                        sh('cp .env.example .env')
+                        sh('set -a && source .env && set +a')
                     }
                 }
             }
@@ -29,6 +32,14 @@ pipeline {
             steps {
                 dir("${BUILD_DIR}") {
                     sh('bun install')
+                }
+            }
+        }
+
+        stage('Generate Preprocess Environment') {
+            steps {
+                dir("${BUILD_DIR}") {
+                    sh('node preprocess.js')
                 }
             }
         }

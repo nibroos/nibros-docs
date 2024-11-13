@@ -5,7 +5,7 @@ Last updated database is around **26 October 2023**. There are 11 roles in this 
 ESPBUPassword1!
 ```
 
-Feel free to try anything in the demo server: [https://espbu.nibross.com](https://espbu.nibross.com/)
+Feel free to try anything in the demo server: [https://espbu.<<DOMAIN_URL>>](https://espbu.<<DOMAIN_URL>>/)
 
 Production server: [https://espbu.undip.id](https://espbu.undip.id/)
 

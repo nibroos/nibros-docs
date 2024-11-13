@@ -11,7 +11,7 @@ If you want to see how I implement features, you can use the search bar or `Ctrl
 Portfolio Nibros is a Single Page Application (SPA) that showcases my past and current work, the result of almost **2 years** of being a **Fullstack Developer**. It's all about turning client needs into products.
 
 <div class="brand-tip">
-  Just want to see the portfolio look like? Visit <a href="https://nibross.com">live demo</a>.
+  Just want to see the portfolio look like? Visit <a href="https://<<DOMAIN_URL>>">live demo</a>.
 </div>
 
 ## Technology Stack
