@@ -14,15 +14,13 @@ pipeline {
     }
 
     stages {
-        stage('Checkout and Load Environment Variables') {
+        stage('Checkout') {
             steps {
                 cleanWs()
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
                     sh("mkdir -p ${BUILD_DIR}")
                     dir("${BUILD_DIR}") {
                         sh('git clone ${GIT_REPO} .')
-                        sh('cp .env.example .env')
-                        sh('. .env')
                     }
                 }
             }
