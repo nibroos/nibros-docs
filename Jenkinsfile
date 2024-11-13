@@ -56,7 +56,7 @@ pipeline {
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
                     dir("${BUILD_DIR}") {
                         sh """
-                        rsync -avz --delete docs/vitepress/dist/ $VPS_USER@$VPS_HOST:$VPS_DEPLOY_DIR
+                        rsync -avz --delete docs/.vitepress/dist/ $VPS_USER@$VPS_HOST:$VPS_DEPLOY_DIR
                         """
                     }
                 }
