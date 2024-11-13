@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                cleanWs()
+                // cleanWs()
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
                     sh "mkdir -p ${BUILD_DIR}"
                     dir("${BUILD_DIR}") {
@@ -64,9 +64,9 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            cleanWs()
-        }
-    }
+    // post {
+    //     always {
+    //         cleanWs()
+    //     }
+    // }
 }
