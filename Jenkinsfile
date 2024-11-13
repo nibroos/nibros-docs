@@ -44,9 +44,7 @@ pipeline {
         stage('Clean Workspace') {
             steps {
                 dir("${BUILD_DIR}") {
-                    sh('find . -maxdepth 1 ! -name \'docs\' ! -name \'.\' -exec rm -rf {} +')
-                    sh('find docs -maxdepth 1 ! -name \'vitepress\' -exec rm -rf {} +')
-                    sh('[ -d docs/.vitepress ] && find docs/.vitepress -maxdepth 1 ! -name \'dist\' -exec rm -rf {} + || echo "Directory docs/.vitepress does not exist"')
+                    sh('ls -A | grep -v docs | xargs rm -rf')
                 }
             }
         }
