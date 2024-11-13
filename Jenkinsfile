@@ -45,8 +45,8 @@ pipeline {
             steps {
                 dir("${BUILD_DIR}") {
                     sh 'find . -maxdepth 1 ! -name \'docs\' ! -name \'.\' -exec rm -rf {} +'
-                    sh 'find docs -maxdepth 1 ! -name \'.vitepress\' -exec rm -rf {} +'
-                    sh 'find docs/.vitepress -maxdepth 1 ! -name \'dist\' -exec rm -rf {} +'
+                    sh 'find docs -maxdepth 1 ! -name \'vitepress\' -exec rm -rf {} +'
+                    sh 'find docs/vitepress -maxdepth 1 ! -name \'dist\' -exec rm -rf {} +'
                 }
             }
         }
@@ -56,7 +56,7 @@ pipeline {
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
                     dir("${BUILD_DIR}") {
                         sh """
-                        rsync -avz --delete docs/.vitepress/dist/ $VPS_USER@$VPS_HOST:$VPS_DEPLOY_DIR
+                        rsync -avz --delete docs/vitepress/dist/ $VPS_USER@$VPS_HOST:$VPS_DEPLOY_DIR
                         """
                     }
                 }
