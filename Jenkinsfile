@@ -22,7 +22,7 @@ pipeline {
                     dir("${BUILD_DIR}") {
                         sh('git clone ${GIT_REPO} .')
                         sh('cp .env.example .env')
-                        sh('set -a && source .env && set +a')
+                        sh('. .env')
                     }
                 }
             }
