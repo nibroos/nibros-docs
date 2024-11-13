@@ -37,7 +37,7 @@ pipeline {
         stage('Generate Preprocess Environment') {
             steps {
                 dir("${BUILD_DIR}") {
-                    sh('node preprocess.js')
+                    sh('bun preprocess.js')
                 }
             }
         }
