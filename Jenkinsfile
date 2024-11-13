@@ -29,7 +29,7 @@ pipeline {
 
         stage('Generate Static Files') {
             steps {
-                sh 'bun run generate'
+                sh 'bun run docs:build'
             }
         }
 
