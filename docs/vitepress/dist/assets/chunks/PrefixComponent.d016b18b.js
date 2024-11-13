@@ -1,1 +1,0 @@
-import{_ as t,o as n,c as o,a as e,k as a}from"./framework.61f21335.js";const s={},c=a("span",{class:"get-endpoint"},"/api",-1);function r(i,_){return n(),o("div",null,[e(" Make sure to add "),c,e(" prefix in the API endpoint. ")])}const p=t(s,[["render",r]]);export{p as P};
