@@ -94,4 +94,8 @@ export default defineConfig({
       }
     }
   },
+  head: [
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'Brodocs Documentation' }]
+  ]
 })
