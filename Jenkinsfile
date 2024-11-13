@@ -9,6 +9,7 @@ pipeline {
         VPS_DEPLOY_DIR = credentials('vps-deploy-dir-nibros-docs')
         BUN_INSTALL = credentials('bun-install')
         PATH = "${BUN_INSTALL}/bin:${env.PATH}"
+        BUILD_DIR = "build-${env.BUILD_ID}"
     }
 
     stages {
@@ -16,35 +17,45 @@ pipeline {
             steps {
                 cleanWs()
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
-                    sh 'git clone ${GIT_REPO} .'
+                    dir("${BUILD_DIR}") {
+                        sh 'git clone ${GIT_REPO} .'
+                    }
                 }
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                sh 'bun install'
+                dir("${BUILD_DIR}") {
+                    sh 'bun install'
+                }
             }
         }
 
         stage('Generate Static Files') {
             steps {
-                sh 'bun run docs:build'
+                dir("${BUILD_DIR}") {
+                    sh 'bun run docs:build'
+                }
             }
         }
 
         stage('Clean Workspace') {
             steps {
-                sh 'find . -maxdepth 1 ! -name \'.output\' ! -name \'.\' -exec rm -rf {} +'
+                dir("${BUILD_DIR}") {
+                    sh 'find . -maxdepth 1 ! -name \'.output\' ! -name \'.\' -exec rm -rf {} +'
+                }
             }
         }
 
         stage('Deploy to VPS') {
             steps {
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
-                    sh """
-                    rsync -avz --delete .output/ ${VPS_USER}@${VPS_HOST}:${VPS_DEPLOY_DIR}
-                    """
+                    dir("${BUILD_DIR}") {
+                        sh """
+                        rsync -avz --delete .output/ ${VPS_USER}@${VPS_HOST}:${VPS_DEPLOY_DIR}
+                        """
+                    }
                 }
             }
         }
