@@ -14,6 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                cleanWs()
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
                     sh 'git clone ${GIT_REPO} .'
                 }
