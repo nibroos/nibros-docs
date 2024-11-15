@@ -73,7 +73,8 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd ${{ env.TEMP_BUILD_DIR }}
-          bun run docs:build
+          bun run docs:build || (echo "Build failed" && exit 1)
+          ls -la docs/.vitepress
           ls -A | grep -v docs/.vitepress | xargs rm -rf
           mv docs/.vitepress/dist/* ./
 
