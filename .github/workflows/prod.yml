@@ -29,6 +29,11 @@ jobs:
         cd ${{ env.TEMP_BUILD_DIR }}
         bun install
 
+    - name: List directory contents
+      run: |
+        cd ${{ env.TEMP_BUILD_DIR }}
+        ls -la
+
     - name: Generate Preprocess Environment
       run: |
         cd ${{ env.TEMP_BUILD_DIR }}
