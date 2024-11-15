@@ -25,12 +25,12 @@ jobs:
         chmod 600 ~/.ssh/nibros_do_server
         ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
-    # - name: Setup SSH for VPS
-    #   run: |
-    #     mkdir -p ~/.ssh
-    #     echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/nibros_do_server
-    #     chmod 600 ~/.ssh/nibros_do_server
-    #     ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+    - name: Setup SSH for VPS
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/nibros_do_server
+        chmod 600 ~/.ssh/nibros_do_server
+        ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
 
     - name: Clone repository on VPS
       uses: appleboy/ssh-action@master
