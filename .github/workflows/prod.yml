@@ -36,7 +36,6 @@ jobs:
     
     - name: Generate static files
       run: |
-        export NODE_OPTIONS=--max-old-space-size=1024
         cd ${{ env.TEMP_BUILD_DIR }}
         bun run docs:build || (echo "Build failed" && exit 1)
         ls -la docs/.vitepress
