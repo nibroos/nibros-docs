@@ -1,0 +1,102 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      GIT_REPO: 'git@github.com:nibroos/nibros-portfolio.git'
+      GIT_BRANCH: 'main'
+      TEMP_BUILD_DIR: '/var/www/tempbuild-${{ github.run_id }}'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup SSH for Git
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/nibros_do_server
+        chmod 600 ~/.ssh/nibros_do_server
+        ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+    - name: Setup SSH for VPS
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/nibros_do_server
+        chmod 600 ~/.ssh/nibros_do_server
+        ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+
+    - name: Clone repository on VPS
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          mkdir -p ${{ env.TEMP_BUILD_DIR }}
+          cd ${{ env.TEMP_BUILD_DIR }}
+          GIT_SSH_COMMAND='ssh -i ~/.ssh/nibros_do_server' git clone ${{ env.GIT_REPO }} -b ${{ env.GIT_BRANCH }} .
+
+    - name: Install packages
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          curl -fsSL https://bun.sh/install | bash && \
+          ln -s $HOME/.bun/bin/bun /usr/local/bin/bun
+          cd ${{ env.TEMP_BUILD_DIR }}
+          bun install
+
+    - name: Generate Preprocess Environment
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd ${{ env.TEMP_BUILD_DIR }}
+          bun preprocess.js
+    
+    - name: Generate static files
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd ${{ env.TEMP_BUILD_DIR }}
+          bun run docs:build
+          ls -A | grep -v .docs/.vitepress | xargs rm -rf
+          mv docs/.vitepress/dist/* ./
+
+    # - name: Deploy to production
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.VPS_HOST }}
+    #     username: ${{ secrets.VPS_USER }}
+    #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+    #     script: |
+    #       rm -rf ${{ secrets.VPS_DEPLOY_DIR }}/*
+    #       cp -r ${{ env.TEMP_BUILD_DIR }}/* ${{ secrets.VPS_DEPLOY_DIR }}
+
+    - name: Clean up build directory
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          # rm -rf ${{ env.TEMP_BUILD_DIR }}
+          mkdir -p gh-builds
+          mv ${{ env.TEMP_BUILD_DIR }} gh-builds/${{ github.run_id }}
+          rm -rf gh-builds/${{ github.run_id }}/*
+          rm -rf ${{ env.TEMP_BUILD_DIR }}
+          echo {{ github.run_id }} > gh-builds/{{ github.run_id }}/run_id.txt
