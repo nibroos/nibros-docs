@@ -72,6 +72,7 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
+          export NODE_OPTIONS=--max-old-space-size=1024
           cd ${{ env.TEMP_BUILD_DIR }}
           bun run docs:build || (echo "Build failed" && exit 1)
           ls -la docs/.vitepress
