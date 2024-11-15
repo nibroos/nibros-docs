@@ -54,6 +54,16 @@ jobs:
           ln -s $HOME/.bun/bin/bun /usr/local/bin/bun
           cd ${{ env.TEMP_BUILD_DIR }}
           bun install
+          
+    - name: List directory contents
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd ${{ env.TEMP_BUILD_DIR }}
+          ls -la
 
     - name: Generate Preprocess Environment
       uses: appleboy/ssh-action@master
