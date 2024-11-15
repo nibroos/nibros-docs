@@ -28,21 +28,11 @@ jobs:
         mkdir -p ${{ env.TEMP_BUILD_DIR }}
         cd ${{ env.TEMP_BUILD_DIR }}
         bun install
-
-    - name: Check directory
-      run: |
-        cd ${{ env.TEMP_BUILD_DIR }}
-        pwd
-
-    - name: List directory contents
-      run: |
-        cd ${{ env.TEMP_BUILD_DIR }}
-        find .
+        bun preprocess.js
 
     - name: Generate Preprocess Environment
       run: |
         cd ${{ env.TEMP_BUILD_DIR }}
-        bun preprocess.js
     
     - name: Generate static files
       run: |
