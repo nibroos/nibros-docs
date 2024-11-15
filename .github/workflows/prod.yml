@@ -29,10 +29,15 @@ jobs:
         cd ${{ env.TEMP_BUILD_DIR }}
         bun install
 
+    - name: Check directory
+      run: |
+        cd ${{ env.TEMP_BUILD_DIR }}
+        pwd
+
     - name: List directory contents
       run: |
         cd ${{ env.TEMP_BUILD_DIR }}
-        ls -la
+        find .
 
     - name: Generate Preprocess Environment
       run: |
