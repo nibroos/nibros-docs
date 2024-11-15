@@ -74,7 +74,7 @@ jobs:
         script: |
           cd ${{ env.TEMP_BUILD_DIR }}
           bun run docs:build
-          ls -A | grep -v .docs/.vitepress | xargs rm -rf
+          ls -A | grep -v docs/.vitepress | xargs rm -rf
           mv docs/.vitepress/dist/* ./
 
     # - name: Deploy to production
