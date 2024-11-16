@@ -198,3 +198,15 @@
   margin: 1rem 0;
   color: white;
 }
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 16px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

@@ -75,6 +75,7 @@ As a backend developer, Fuel price is the most challenging feature to implement.
 ### Backend
 - [PHP 8.0.2](https://www.php.net/)
 - [Laravel 9.2](https://laravel.com/)
+- [MySQL 8.0](https://www.mysql.com/)
 - [Laravel Batch](https://github.com/mavinoo/laravelBatch)
 - [Laravel Snappy](https://github.com/barryvdh/laravel-snappy)
 - [Fast Excel](https://github.com/rap2hpoutre/fast-excel)

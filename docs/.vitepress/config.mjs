@@ -1,6 +1,45 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar';
 
+const derpSidebar = generateSidebar({
+  documentRootPath: '/docs',
+  hyphenToSpace: true,
+  collapsed: false,
+  useTitleFromFileHeading: true,
+  useFolderTitleFromIndexFile: true,
+  capitalizeFirst: true,
+  useFolderLinkFromIndexFile: false,
+  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'e-learning', 'sim-rs'],
+  manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
+})
+
+const elearningSidebar = generateSidebar({
+  documentRootPath: '/docs',
+  hyphenToSpace: true,
+  collapsed: false,
+  useTitleFromFileHeading: true,
+  useFolderTitleFromIndexFile: true,
+  capitalizeFirst: true,
+  useFolderLinkFromIndexFile: false,
+  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'sim-rs'],
+  manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
+})
+
+const simrsSidebar = generateSidebar({
+  documentRootPath: '/docs',
+  hyphenToSpace: true,
+  collapsed: false,
+  useTitleFromFileHeading: true,
+  useFolderTitleFromIndexFile: true,
+  capitalizeFirst: true,
+  useFolderLinkFromIndexFile: false,
+  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'e-learning'],
+  manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
+})
+
 const espbuSidebar = generateSidebar({
   documentRootPath: '/docs',
   hyphenToSpace: true,
@@ -10,7 +49,7 @@ const espbuSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -23,7 +62,7 @@ const koperasiMultiasaSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['espbu', 'portfolio', 'brodocs'],
+  excludeFolders: ['espbu', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -36,7 +75,7 @@ const portfolioSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs'],
+  excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs', 'd-erp', 'e-learning', 'sim-rs'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -54,7 +93,10 @@ export default defineConfig({
         // Dropdown Menu
         text: "Projects",
         items: [
+          { text: "D-ERP", link: "/d-erp/getting-started/introduction.md" },
           { text: "E-SPBU", link: "/espbu/getting-started/introduction.md" },
+          { text: "SIM-RS", link: "/sim-rs/getting-started/introduction.md" },
+          { text: "E-Learning", link: "/e-learning/getting-started/introduction.md" },
           { text: "Koperasi Multiasa", link: "/koperasi-multiasa/getting-started/introduction.md" },
           { text: "Portfolio", link: "/portfolio/getting-started/introduction.md" },
         ],
@@ -72,7 +114,10 @@ export default defineConfig({
     ],
     // Sidebar
     sidebar: {
+      '/d-erp/': derpSidebar,
       '/espbu/': espbuSidebar,
+      '/sim-rs/': simrsSidebar,
+      '/e-learning/': elearningSidebar,
       '/koperasi-multiasa/': koperasiMultiasaSidebar,
       '/portfolio/': portfolioSidebar,
     },

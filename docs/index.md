@@ -6,18 +6,30 @@ layout: home
 hero:
   name: Brodocs
   text: Documentation.
-  tagline: Showcasing my past & current work. Get more detailed information about projects, principles, concepts, features, and more!
+  tagline: Showcasing my past & current work. Get more detailed information about work experience, projects, principles, concepts, features, and more!
   actions:
     - theme: brand
-      text: Get Started
+      text: About Me
       link: /about
 
 # Features section
 features:
+  - icon: 📚
+    title: D-ERP System
+    details: Digital enterprise resource planning <br> <div></div>
+    link: /d-erp/getting-started/introduction
   - icon: ⛽
     title: E-SPBU Management
     details: Fuel station assets management
     link: /espbu/getting-started/introduction
+  - icon: 🏥
+    title: SIM-RS
+    details: Hospital management system
+    link: /sim-rs/getting-started/introduction
+  - icon: 🎓
+    title: E-Learning
+    details: Online learning platform
+    link: /e-learning/getting-started/introduction
   - icon: 💸
     title: Koperasi Multiasa
     details: Cooperation transaction control
