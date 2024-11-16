@@ -30,6 +30,7 @@ pipeline {
             steps {
                 dir("${BUILD_DIR}") {
                     sh('bun install')
+                    sh('bun upgrade')
                 }
             }
         }
