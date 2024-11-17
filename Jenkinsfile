@@ -30,7 +30,7 @@ pipeline {
             steps {
                 dir("${BUILD_DIR}") {
                     sh('bun i')
-                    sh('bun i vitepress@1.0.2')
+                    sh('bun i vitepress@1.0.0-rc.45')
                 }
             }
         }

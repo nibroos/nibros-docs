@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "postcss": "^8.4.49",
-    "vitepress": "^1.0.2",
+    "vitepress": "^1.0.0-rc.45",
     "vitepress-sidebar": "^1.29.0"
   },
   "scripts": {
