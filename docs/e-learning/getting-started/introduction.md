@@ -8,7 +8,15 @@ If you want to see how I implement features, you can use the search bar or `Ctrl
 
 ## What is E-Learning?
 
-E-Learning is an online learning platform that is designed for those who want to carry out learning and equivalency exams for package A (Equivalent to Elementary School), package B (Equivalent to Junior High School), and package C (Equivalent to Senior High School) with customizable material & exam questions prepared by flexible and easily accessible instructors.
+E-Learning is an online learning platform that is designed for those who want to carry out learning and equivalency exams for package A (Equivalent to Elementary School), package B (Equivalent to Junior High School), and package C (Equivalent to Senior High School) with customizable material & exam questions prepared by flexible and easily accessible instructors and students. Until now, I have implemented the following features:
+- Auth System.
+- Roles & Permissions.
+- Log Activities.
+- Contract, Class, & Education Management.
+- Exam System.
+- Learn Time System.
+- Appointments.
+- Master Data Mix Values.
 
 <!-- <div class="brand-tip">
   Just want to see the portfolio look like? Visit <a href="https://<<DOMAIN_URL>>">live demo</a>.

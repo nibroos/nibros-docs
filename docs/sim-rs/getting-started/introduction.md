@@ -29,6 +29,7 @@ Welcome to the SIM-RS. This is a hospital management system. This system is desi
 | [Javascript](https://www.javascript.com/) | [Express](https://expressjs.com/) |
 | [Vue 2](https://v2.vuejs.org/) | [Node.js](https://nodejs.org/) |
 | [Bootstrap 4](https://getbootstrap.com/) | [PostgreSQL](https://www.postgresql.org/) |
+| [Socket IO](https://socket.io/) | |
 
 
 <!-- ### Frontend
