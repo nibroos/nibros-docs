@@ -29,7 +29,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir("${BUILD_DIR}") {
-                    sh('bun install')
+                    sh('bun i')
+                    sh('bun i vitepress@1.4.0')
                     sh('bun upgrade')
                 }
             }
