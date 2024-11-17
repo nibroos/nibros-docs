@@ -14,29 +14,6 @@ pipeline {
     }
 
     stages {
-        stage('Install System Dependencies') {
-            steps {
-                sh '''
-                apt update
-                apt install -y \
-                    freetype-dev \
-                    libjpeg-turbo-dev \
-                    libpng-dev \
-                    oniguruma-dev \
-                    libxml2-dev \
-                    icu-dev \
-                    libzip-dev \
-                    zip \
-                    unzip \
-                    git \
-                    curl \
-                    make \
-                    gcc \
-                    g++
-                '''
-            }
-        }
-
         stage('Checkout') {
             steps {
                 cleanWs()
