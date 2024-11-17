@@ -17,8 +17,8 @@ pipeline {
         stage('Install System Dependencies') {
             steps {
                 sh '''
-                sudo apt update
-                sudo apt install -y \
+                apt update
+                apt install -y \
                     freetype-dev \
                     libjpeg-turbo-dev \
                     libpng-dev \
@@ -36,7 +36,7 @@ pipeline {
                 '''
             }
         }
-        
+
         stage('Checkout') {
             steps {
                 cleanWs()
