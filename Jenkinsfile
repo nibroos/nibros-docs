@@ -29,8 +29,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir("${BUILD_DIR}") {
-                    sh('npm i')
-                    // sh('npm upgrade')
+                    sh('bun i')
+                    sh('bun i vitepress@1.0.0-rc.22')
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
         stage('Generate Static Files') {
             steps {
                 dir("${BUILD_DIR}") {
-                    sh('npm run docs:build')
+                    sh('bun run docs:build')
                 }
             }
         }
