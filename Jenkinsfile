@@ -29,8 +29,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir("${BUILD_DIR}") {
-                    sh('bun i')
-                    sh('bun upgrade')
+                    sh('npm i')
+                    // sh('npm upgrade')
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
         stage('Generate Static Files') {
             steps {
                 dir("${BUILD_DIR}") {
-                    sh('bun run docs:build')
+                    sh('npm run docs:build')
                 }
             }
         }
