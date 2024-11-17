@@ -26,30 +26,30 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                dir("${BUILD_DIR}") {
-                    sh('bun install')
-                    sh('bun upgrade')
-                }
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         dir("${BUILD_DIR}") {
+        //             sh('bun install')
+        //             sh('bun upgrade')
+        //         }
+        //     }
+        // }
 
-        stage('Generate Preprocess Environment') {
-            steps {
-                dir("${BUILD_DIR}") {
-                    sh('bun preprocess.js')
-                }
-            }
-        }
+        // stage('Generate Preprocess Environment') {
+        //     steps {
+        //         dir("${BUILD_DIR}") {
+        //             sh('bun preprocess.js')
+        //         }
+        //     }
+        // }
 
-        stage('Generate Static Files') {
-            steps {
-                dir("${BUILD_DIR}") {
-                    sh('bun run docs:build')
-                }
-            }
-        }
+        // stage('Generate Static Files') {
+        //     steps {
+        //         dir("${BUILD_DIR}") {
+        //             sh('bun run docs:build')
+        //         }
+        //     }
+        // }
 
         stage('Clean Workspace') {
             steps {
