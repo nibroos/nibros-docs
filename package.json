@@ -1,6 +1,8 @@
 {
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
     "vitepress": "1.0.0-rc.22",
     "vitepress-sidebar": "^1.29.0"
   },

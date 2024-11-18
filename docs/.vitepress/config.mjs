@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar';
+import '../styles/tailwind.css'
 
 const derpSidebar = generateSidebar({
   documentRootPath: '/docs',

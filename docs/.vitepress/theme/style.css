@@ -148,11 +148,23 @@
   font-weight: 600;
 }
 
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
 .custom-layout .btn {
   background-color: var(--vp-button-brand-bg);
   color: var(--vp-button-brand-text);
   border-radius: 20px;
   padding: 0.5rem 1.4rem;
+}
+
+.hero-btn {
+  background-color: var(--vp-button-brand-bg);
+  color: var(--vp-button-brand-text);
+  border-radius: 20px;
+  padding: 0.35rem 1.4rem;
 }
 
 .brand-tip {
