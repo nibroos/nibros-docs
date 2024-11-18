@@ -16,7 +16,10 @@ hero:
 features:
   - icon: 📚
     title: D-ERP System
-    details: Digital enterprise resource planning <br> <div></div>
+    details: Digital enterprise resource planning <br> 
+    # <div class="flex gap-2">
+    #   <div>Laravel</div>
+    # </div>
     link: /d-erp/getting-started/introduction
   - icon: ⛽
     title: E-SPBU Management
