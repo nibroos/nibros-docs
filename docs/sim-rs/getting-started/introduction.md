@@ -45,18 +45,17 @@ Welcome to the SIM-RS. This is a hospital management system. This system is desi
 
 ## Screenshots
 
-
 ### ***VClaim***
 
-<img src="https://media.licdn.com/dms/image/v2/D562DAQFg_HqwCYbnYw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703740133272?e=1732377600&v=beta&t=VZ7fD4elEZhRs8HHO8AkiGTgA1V2rW4wVwZqcfsyexI" alt="VClaim">
+<img src="https://github.com/user-attachments/assets/7c932fb5-1882-4d7f-89f4-024ca21f0d1d" alt="VClaim">
 
 ### ***Registration***
 
-<img src="https://media.licdn.com/dms/image/v2/D562DAQH76upRjpfbcg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703739461364?e=1732377600&v=beta&t=6rUAk1saVLunyp5suhAqb8pSYRu6cPJ6CikCg45P08g" alt="Registration">
+<img src="https://github.com/user-attachments/assets/b8a64b83-d89d-4988-bf57-38c5fbb90952" alt="Registration">
 
 ### ***Queue***
 
-<img src="https://media.licdn.com/dms/image/v2/D562DAQHzNBg5-O9Eeg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703739317069?e=1732377600&v=beta&t=f9Bqa1Y4T_BRU9AoYtWmxtKVzu_O4lNdJWJF70hgXRo" alt="Queue">
+<img src="https://github.com/user-attachments/assets/137c6aa0-7e54-48dd-9cd1-2c6f176f53ed" alt="Queue">
 
 ## Source Code
 

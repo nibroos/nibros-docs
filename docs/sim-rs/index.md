@@ -45,18 +45,17 @@ Welcome to the SIM-RS. This is a hospital management system. This system is desi
 
 ## Screenshots
 
-
 ### ***VClaim***
 
-<img src="https://media.licdn.com/dms/image/v2/D562DAQFg_HqwCYbnYw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703740133272?e=1732377600&v=beta&t=VZ7fD4elEZhRs8HHO8AkiGTgA1V2rW4wVwZqcfsyexI" alt="VClaim">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73767596/396682325-7c932fb5-1882-4d7f-89f4-024ca21f0d1d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241219T011030Z&X-Amz-Expires=300&X-Amz-Signature=f9ae80b0db530a6792adc83ccba955a46704325ebd24c0107e17757531a1fc91&X-Amz-SignedHeaders=host" alt="VClaim">
 
 ### ***Registration***
 
-<img src="https://media.licdn.com/dms/image/v2/D562DAQH76upRjpfbcg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703739461364?e=1732377600&v=beta&t=6rUAk1saVLunyp5suhAqb8pSYRu6cPJ6CikCg45P08g" alt="Registration">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73767596/396682256-b8a64b83-d89d-4988-bf57-38c5fbb90952.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241219T011012Z&X-Amz-Expires=300&X-Amz-Signature=c307bdc0525892cedaf2e557508f0d5e455452f9e300c13efef61ffda71fad8d&X-Amz-SignedHeaders=host" alt="Registration">
 
 ### ***Queue***
 
-<img src="https://media.licdn.com/dms/image/v2/D562DAQHzNBg5-O9Eeg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703739317069?e=1732377600&v=beta&t=f9Bqa1Y4T_BRU9AoYtWmxtKVzu_O4lNdJWJF70hgXRo" alt="Queue">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73767596/396681967-137c6aa0-7e54-48dd-9cd1-2c6f176f53ed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241219T010850Z&X-Amz-Expires=300&X-Amz-Signature=32e08f26a57fb18bd2c1d0da033c0f61a610652a0493d82fb456b7e4099ae2d4&X-Amz-SignedHeaders=host" alt="Queue">
 
 ## Source Code
 
