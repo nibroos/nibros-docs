@@ -9,7 +9,7 @@ Every developer has their own concepts. They are the foundation of how I work. T
     <div v-for="project in projects" :key="project.name" class="text-left flex flex-col justify-between hover:border hover:border-[#846358] p-6 rounded-lg gap-3 hover:cursor-pointer" style="background-color:var(--vp-c-bg-soft);" @click="navigate(project.link)">
       <div class="flex flex-col gap-3">
         <h3 class="!font-semibold text-lg !m-0" style="color:var(--vp-c-text-1)">{{ project.name }}</h3>
-        <p class="text-sm !m-0" style="color: var(--vp-c-text-2)">{{ project.minutes }} minutes read</p>
+        <p class="text-sm !m-0" style="color: var(--vp-c-text-2)">{{ project.minutes }} minutes read • {{ project.posted }}</p>
         <p class="text-sm !m-0" style="color: var(--vp-c-text-2)">{{ project.description }}</p>
       </div>
       <div class="flex flex-col gap-4">
@@ -35,23 +35,11 @@ const router = useRouter()
 
 const projects = ref([
   {
-    name: '3 Recommended Patterns for Back-End Functionality',
-    description: 'What code conventions do I use to organize back-end functionality? These patterns are designed to make the code more readable, maintainable, and efficient.',
-    link: '/concepts/3-back-end-patterns',
-    minutes: '5',
-    techStack: [
-      '/lv-icon.svg',
-      '/php-icon.svg',
-      '/js-icon.svg',
-      '/node-icon.svg',
-      '/go-icon.svg',
-    ],
-  },
-  {
     name: 'CI/CD Pipeline Strategy for Go Project',
     description: 'How do I automate the deployment process for a Go project? This pipeline script is designed to build, test, and deploy the application consistently across different environments.',
     link: '/concepts/ci-cd-pipeline-strategy',
     minutes: '7',
+    posted: 'Dec 22, 2024',
     techStack: [
       '/go-icon.svg',
       '/pg-icon.svg',
@@ -59,6 +47,20 @@ const projects = ref([
       '/linux-icon.svg',
       '/do-icon.svg',
       '/jk-icon.svg',
+    ],
+  },
+  {
+    name: '3 Recommended Patterns for Back-End Functionality',
+    description: 'What code conventions do I use to organize back-end functionality? These patterns are designed to make the code more readable, maintainable, and efficient.',
+    link: '/concepts/3-back-end-patterns',
+    minutes: '5',
+    posted: 'Dec 8, 2024',
+    techStack: [
+      '/lv-icon.svg',
+      '/php-icon.svg',
+      '/js-icon.svg',
+      '/node-icon.svg',
+      '/go-icon.svg',
     ],
   },
 ])

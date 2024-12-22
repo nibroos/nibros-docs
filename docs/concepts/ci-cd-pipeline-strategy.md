@@ -1,6 +1,6 @@
 # Go Jenkins CI/CD Pipeline Strategy
 
-`7 minutes read`
+`7 minutes read` · Dec 22, 2024
 
 Tech: `Go`, `Fiber`, `PostgreSQL`, `Docker`, `Linux`, `DigitalOcean`, `Jenkins`, `golang-migrate`, `Docker Compose`, `Makefile`, `Git`, `GitHub`
 
@@ -1063,7 +1063,10 @@ networks:
 :::
 
 :::tip Note
-Since the **network is shared** between the production and test environments, the **test containers** should communicate with the **production database and Redis instance**. Ensure that the test containers are configured to use the **test database and Redis DB**. The **test containers** use different database and Redis configurations to avoid conflicts with the production environment.
+- Since the **network is shared** between the production and test environments, the **test containers** should communicate with the **production database and Redis instance**. Ensure that the test containers are configured to use the **test database and Redis DB**. The **test containers** use different database and Redis configurations to avoid conflicts with the production environment.
+- The production must be running for the tests to pass, you can also use a separate network for the test environment to avoid this, by creating new service on the test environment that will run the database and redis similar to the production environment. Im not creating a new service for the test environment because the resources are limited, for the real world scenario you should create a new service for the test environment.
+
+
 :::
 
 ## Pipeline Stages
