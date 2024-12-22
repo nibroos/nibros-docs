@@ -11,7 +11,7 @@ const derpSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'e-learning', 'sim-rs'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -24,7 +24,7 @@ const elearningSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'sim-rs'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -37,7 +37,7 @@ const simrsSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'e-learning'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'e-learning', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -50,7 +50,7 @@ const espbuSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -63,7 +63,7 @@ const koperasiMultiasaSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['espbu', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs'],
+  excludeFolders: ['espbu', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -76,7 +76,7 @@ const portfolioSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md'],
-  excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs', 'd-erp', 'e-learning', 'sim-rs'],
+  excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -89,7 +89,7 @@ export default defineConfig({
     // Navbar Link
     nav: [
       { text: "About", link: "/about" },
-      { text: "Concepts", link: "/concepts" },
+      { text: "Concepts", link: "/concepts/index.html" },
       {
         // Dropdown Menu
         text: "Projects",
@@ -138,6 +138,9 @@ export default defineConfig({
         apiKey: 'd6d48db9fb5b66a017cdcbfabd661a39',
         indexName: 'nibross'
       }
+    },
+    outline: {
+      level: 'deep',
     }
   },
   head: [

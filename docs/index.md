@@ -31,8 +31,8 @@ head:
 
 
 <!-- Custom home layout -->
-<div class="antialiased px-48">
-  <div class="grid grid-cols-4 gap-4">
+<div class="antialiased sm:px-6 md:px-12 lg:px-16 px-20">
+  <div class="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     <div v-for="project in projects" :key="project.name" class="text-left flex flex-col justify-between hover:border hover:border-[#846358] p-6 rounded-lg gap-3 hover:cursor-pointer" style="background-color:var(--vp-c-bg-soft);" @click="navigate(project.link)">
       <div class="flex flex-col gap-3">
         <div class="rounded-lg" style="background-color:var(--vp-c-bg-soft)">
@@ -166,7 +166,6 @@ const projects = ref([
 ])
 
 const navigate = (link) => {
-  console.log(link)
   router.go(link)
 }
 </script>

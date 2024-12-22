@@ -44,12 +44,12 @@ This documentation provides insights into the strategies, challenges, and soluti
 
 <br>
 
-#### Main Projects:
+#### Main Projects
 - [D-ERP System](/d-erp/getting-started/introduction) (PT Yubi Technology)
 - [E-SPBU Management](/espbu/getting-started/introduction) (BP UBIKAR UNDIP)
 - [SIM-RS](/sim-rs/getting-started/introduction) (PT Serova Solutions)
 
-#### Side Projects:
+#### Side Projects
 - [E-Learning](/e-learning/getting-started/introduction) (Freelance)
 - [Koperasi Multiasa](/koperasi-multiasa/getting-started/introduction) (BP UBIKAR UNDIP)
 - [Portfolio Nibros](/portfolio/getting-started/introduction)
