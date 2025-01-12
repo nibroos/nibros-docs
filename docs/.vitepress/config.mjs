@@ -90,6 +90,7 @@ export default defineConfig({
     nav: [
       { text: "About", link: "/about" },
       { text: "Concepts", link: "/concepts/index.html" },
+      { text: "Contact", link: "/contact" },
       {
         // Dropdown Menu
         text: "Projects",
