@@ -9,8 +9,11 @@ hero:
   tagline: Showcasing my past & current work. Get more detailed information about work experience, projects, principles, concepts, features, and more!
   actions:
     - theme: brand
-      text: More details
+      text: About Me
       link: /about
+    - theme: alt
+      text: Concepts
+      link: /concepts/index
 
 # Meta property
 head:

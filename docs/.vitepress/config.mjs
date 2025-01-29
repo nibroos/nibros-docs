@@ -10,7 +10,7 @@ const derpSidebar = generateSidebar({
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
-  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
   excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
@@ -23,7 +23,7 @@ const elearningSidebar = generateSidebar({
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
-  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
   excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
@@ -36,7 +36,7 @@ const simrsSidebar = generateSidebar({
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
-  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
   excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'e-learning', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
@@ -49,7 +49,7 @@ const espbuSidebar = generateSidebar({
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
-  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
   excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
@@ -62,7 +62,7 @@ const koperasiMultiasaSidebar = generateSidebar({
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
-  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
   excludeFolders: ['espbu', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
@@ -75,7 +75,7 @@ const portfolioSidebar = generateSidebar({
   useFolderTitleFromIndexFile: true,
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
-  excludeFiles: ['index.md', 'about.md', 'concepts.md'],
+  excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
   excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })

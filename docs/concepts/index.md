@@ -35,6 +35,18 @@ const router = useRouter()
 
 const projects = ref([
   {
+    name: 'Jenkins Essentials',
+    description: 'What are the essential steps to set up a Jenkins CI/CD pipeline? This guide covers the installation, configuration, and usage of Jenkins for automating the build, test, and deployment process.',
+    link: '/concepts/jenkins-essentials',
+    minutes: '4',
+    posted: 'Jan 29, 2025',
+    techStack: [
+      '/docker-icon.svg',
+      '/linux-icon.svg',
+      '/jk-icon.svg',
+    ],
+  },
+  {
     name: 'CI/CD Pipeline Strategy for Go Project',
     description: 'How do I automate the deployment process for a Go project? This pipeline script is designed to build, test, and deploy the application consistently across different environments.',
     link: '/concepts/ci-cd-pipeline-strategy',
