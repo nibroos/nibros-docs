@@ -37,8 +37,19 @@ FROM jenkins/jenkins:lts
 # Switch to root user to install dependencies
 USER root
 
+# Set the timezone using the TZ environment variable
+ENV TZ=Asia/Bangkok
+
 # Install curl and nano
 RUN apt-get update && apt-get install -y curl nano rsync
+
+# Add GitHub's SSH host key to known_hosts
+RUN mkdir -p /var/jenkins_home/.ssh && \
+    ssh-keyscan github.com >> /var/jenkins_home/.ssh/known_hosts
+
+# Set the timezone to Asia/Bangkok or Asia/Jakarta
+RUN ln -fs /usr/share/zoneinfo/Asia/Bangkok /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
 
 # Switch to the Jenkins user
 USER jenkins
@@ -108,9 +119,28 @@ Once the plugins are installed, you will be prompted to create an admin user. Fi
 
 After creating the admin user, you will be redirected to the Jenkins dashboard, where you can create a new pipeline.
 
-## Recommended Jenkins Plugins
+## Setting up a Jenkins Pipeline
 
 The following Jenkins plugins are recommended for setting up the CI/CD pipeline:
+
+### Adding SSH Key to Jenkins
+
+To add an SSH key to Jenkins, follow these steps:
+
+1. Go to `Manage Jenkins` > `Manage Credentials`.
+2. Click on `Jenkins` > `Global credentials`.
+3. Click on `Add Credentials`.
+4. Select `SSH Username with private key` as the kind.
+5. Enter the credentials and click `OK`.
+6. If the SSH key doesn't work, you can add the SSH key to the Jenkins container by running the following command:
+<!-- known_hosts -->
+```bash
+docker exec -it jenkins bash
+```
+
+```bash
+ssh-keyscan github.com >> /var/jenkins_home/.ssh/known_hosts
+```
 
 ### Role-based Authorization Strategy
 
