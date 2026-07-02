@@ -9,7 +9,7 @@ hero:
   tagline: Showcasing my past & current work. Get more detailed information about work experience, projects, principles, concepts, features, and more!
   actions:
     - theme: brand
-      text: About Me
+      text: View Experience
       link: /about
     - theme: alt
       text: Concepts
@@ -68,8 +68,21 @@ const router = useRouter()
 
 const projects = ref([
   {
+    name: 'MySiloam (Siloam Hospitals)',
+    description: 'Patient mobile app backend — BFF + microservices (payments, reminders, health analytics)',
+    link: '/siloam/getting-started/introduction',
+    icon: '📱',
+    techStack: [
+      '/node-icon.svg',
+      '/js-icon.svg',
+      '/pg-icon.svg',
+      '/apm-icon.svg',
+      '/sonar-icon.svg',
+    ],
+  },
+  {
     name: 'D-ERP System',
-    description: 'Sales, Purchase, Inventory, Production, etc',
+    description: 'Quotations, Sales, Purchase, Inventory, Production, etc',
     link: '/d-erp/getting-started/introduction',
     icon: '📚',
     techStack: [

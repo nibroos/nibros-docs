@@ -2,9 +2,9 @@
 
 ### Greetings 👋
 
-My name is **Nibros Ari Wibowo** as A Fullstack Developer currently working at PT Yubi Technology, Im proudly to present my projects that I've been working on.
+My name is **Nibros Ari Wibowo** as A Fullstack Developer, Im proudly to present my projects that I've been working on.
 
-This documentation showcases my past and current work, the result of almost **3 years** of being a **Fullstack Developer**. It's all about turning client needs into products.
+This documentation showcases my past and current work, the result of almost **4 years** of being a **Fullstack Developer**. It's all about turning client needs into products.
 
 Carrying **product-owning** mentality that makes me think about the product as a whole, not just the code.
 
@@ -12,7 +12,17 @@ In this period, I've learned and adapted as a developer. These projects are the 
 
 This documentation provides insights into the strategies, challenges, and solutions that go into turning concepts into web solutions.
 
+Most recently, I've been working as a **backend engineer on [MySiloam](/siloam/getting-started/introduction)** — the patient mobile app for **Siloam Hospitals**, Indonesia's largest private hospital network. Across a Backend-for-Frontend and five Node.js microservices, I delivered the app's **payment-gateway integration** (Funddock / Midtrans / NOBU / QRIS), a **WhatsApp appointment-reminder** system, and an **AI-powered Health Analytics** engine, while resolving hundreds of production bugs and patient-data-integrity issues. Explore the full write-up in the [MySiloam section](/siloam/).
+
 ### Experience :hammer_and_wrench:
+
+#### **Backend Engineer** — MySiloam Mobile Platform, Siloam Hospitals (Jun 2025 - Jun 2026)
+ :round_pushpin: Tangerang, Indonesia
+- Building and supporting the backend for **MySiloam**, the patient mobile app (iOS & Android) of Indonesia's largest private hospital network — across a BFF and five Node.js microservices.
+- Integrated the **Funddock / Kairos Pay payment gateway** (Midtrans, NOBU, QRIS) across teleconsult, telechat, secured booking, and prescription refill — with signed requests, asynchronous callbacks, and idempotent change-payment.
+- Designed a **WhatsApp D-1 appointment reminder** system (cron scheduler, deep links, reschedule/cancel handling) and an **AI Health Analytics** recommendation engine (Gemini) backed by a Redis cache.
+- Delivered **Self Checkout (SCO)** self-payment flows and optimised expensive **doctor-search** queries; pushed recurring data fixes into the database via PostgreSQL triggers.
+- Resolved a high volume of **production bugs and patient-data-integrity issues** across app, front-office, and EMR systems; hardened security (blind SQL-injection fix, pbkdf2 hashing, signed payment requests) and supported 8+ app releases.
 
 #### **Fullstack Developer** at PT Yubi Technology (Mar 2024 - Present)
  :round_pushpin: Jakarta Utara, Indonesia
@@ -45,6 +55,7 @@ This documentation provides insights into the strategies, challenges, and soluti
 <br>
 
 #### Main Projects
+- [MySiloam](/siloam/getting-started/introduction) (Siloam Hospitals)
 - [D-ERP System](/d-erp/getting-started/introduction) (PT Yubi Technology)
 - [E-SPBU Management](/espbu/getting-started/introduction) (BP UBIKAR UNDIP)
 - [SIM-RS](/sim-rs/getting-started/introduction) (PT Serova Solutions)
