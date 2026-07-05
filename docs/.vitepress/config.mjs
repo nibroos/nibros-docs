@@ -11,7 +11,7 @@ const derpSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'e-learning', 'sim-rs', 'concepts', 'siloam'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'e-learning', 'sim-rs', 'concepts', 'siloam', 's-erp'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -24,7 +24,7 @@ const elearningSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'sim-rs', 'concepts', 'siloam'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'sim-rs', 'concepts', 'siloam', 's-erp'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -37,7 +37,7 @@ const simrsSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'e-learning', 'concepts', 'siloam'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'espbu', 'd-erp', 'e-learning', 'concepts', 'siloam', 's-erp'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -50,7 +50,7 @@ const espbuSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
-  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 'siloam'],
+  excludeFolders: ['koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 'siloam', 's-erp'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -63,7 +63,7 @@ const koperasiMultiasaSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
-  excludeFolders: ['espbu', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 'siloam'],
+  excludeFolders: ['espbu', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 'siloam', 's-erp'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -76,7 +76,7 @@ const portfolioSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
-  excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 'siloam'],
+  excludeFolders: ['espbu', 'koperasi-multiasa', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 'siloam', 's-erp'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md'],
 })
 
@@ -89,8 +89,21 @@ const siloamSidebar = generateSidebar({
   capitalizeFirst: true,
   useFolderLinkFromIndexFile: false,
   excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
-  excludeFolders: ['espbu', 'koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts'],
+  excludeFolders: ['espbu', 'koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 's-erp'],
   manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md', 'projects', 'services'],
+})
+
+const serpSidebar = generateSidebar({
+  documentRootPath: '/docs',
+  hyphenToSpace: true,
+  collapsed: false,
+  useTitleFromFileHeading: true,
+  useFolderTitleFromIndexFile: true,
+  capitalizeFirst: true,
+  useFolderLinkFromIndexFile: false,
+  excludeFiles: ['index.md', 'about.md', 'concepts.md', 'contact.md'],
+  excludeFolders: ['espbu', 'koperasi-multiasa', 'portfolio', 'brodocs', 'd-erp', 'e-learning', 'sim-rs', 'concepts', 'siloam'],
+  manualSortFileNameByPriority: ['getting-started', 'introduction.md', 'installation.md', 'modules', 'engineering'],
 })
 
 // https://vitepress.dev/reference/site-config
@@ -108,6 +121,7 @@ export default defineConfig({
         // Dropdown Menu
         text: "Projects",
         items: [
+          { text: "S-ERP", link: "/s-erp/getting-started/introduction.md" },
           { text: "D-ERP", link: "/d-erp/getting-started/introduction.md" },
           { text: "E-SPBU", link: "/espbu/getting-started/introduction.md" },
           { text: "SIM-RS", link: "/sim-rs/getting-started/introduction.md" },
@@ -137,6 +151,7 @@ export default defineConfig({
       '/koperasi-multiasa/': koperasiMultiasaSidebar,
       '/portfolio/': portfolioSidebar,
       '/siloam/': siloamSidebar,
+      '/s-erp/': serpSidebar,
     },
     // sidebar: ,
     footer: {

@@ -34,6 +34,8 @@ Most recently, I've been working as a **backend engineer on [MySiloam](/siloam/g
 - Integrating external API services, particularly the CEISA 4.0 Bea Cukai API, into the project.
 - Setup Ubuntu & Windows Server 2019 on client server using cloudflare tunnel.
 - Implementing rule pricing on specific items & conditions
+- Architected and built **[S-ERP](/s-erp/getting-started/introduction)**, a 41-module manufacturing ERP with a **Go/Fiber** backend (~430 endpoints, 150+ migrations, PostgreSQL, Redis, RabbitMQ, Asynq, cron) behind an Nginx gateway, and a **Nuxt 3 + Vuetify** front end — covering quotation, sales/purchase orders, request orders, inventory in/out, and four invoice types with VAT/PPh23 tax.
+- Instrumented full observability for S-ERP (Prometheus, Grafana, Jaeger tracing, Elasticsearch) with k6/vegeta load tests, and authored a written code-review of its security & architecture debt.
 
 #### **Fullstack Developer** at BP UBIKAR UNDIP (May 2022 - Dec 2023)
  :round_pushpin: Semarang, Indonesia
@@ -56,6 +58,7 @@ Most recently, I've been working as a **backend engineer on [MySiloam](/siloam/g
 
 #### Main Projects
 - [MySiloam](/siloam/getting-started/introduction) (Siloam Hospitals)
+- [S-ERP System](/s-erp/getting-started/introduction) (PT Yubi Technology)
 - [D-ERP System](/d-erp/getting-started/introduction) (PT Yubi Technology)
 - [E-SPBU Management](/espbu/getting-started/introduction) (BP UBIKAR UNDIP)
 - [SIM-RS](/sim-rs/getting-started/introduction) (PT Serova Solutions)

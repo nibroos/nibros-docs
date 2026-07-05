@@ -81,6 +81,22 @@ const projects = ref([
     ],
   },
   {
+    name: 'S-ERP System',
+    description: 'Go/Fiber manufacturing ERP — quotation, sales, purchase, inventory in/out, DP/adjustment/maintenance invoices',
+    link: '/s-erp/getting-started/introduction',
+    icon: '🏭',
+    techStack: [
+      '/go-icon.svg',
+      '/pg-icon.svg',
+      '/nuxt-icon.svg',
+      '/vue-icon.svg',
+      '/ts-icon.svg',
+      '/tw-icon.svg',
+      '/docker-icon.svg',
+      '/jk-icon.svg',
+    ],
+  },
+  {
     name: 'D-ERP System',
     description: 'Quotations, Sales, Purchase, Inventory, Production, etc',
     link: '/d-erp/getting-started/introduction',
