@@ -31,6 +31,12 @@ The business modules that make up S-ERP, grouped by area. Each page covers the *
 | [Invoice Adjustment](/s-erp/modules/invoice-adjustment) | Corrections / credit-debit notes against existing invoices. |
 | [Maintenance Invoice](/s-erp/modules/invoice-maintenance) | Service/maintenance billing with an email-on-approval workflow. |
 
+## Collaboration & AI
+
+| Module | What it does |
+|---|---|
+| [Chat & AI Assistant](/s-erp/modules/chat-ai) | Real-time chat (DMs, groups, threads, reactions, attachments, presence) over REST + WebSocket, plus an AI assistant that answers from live ERP data through a provably safe read-only database boundary. |
+
 ## Cross-module engineering
 
 The document flow that ties these together, plus the shared list/filter pattern, logging, and background jobs, are covered under [Engineering](/s-erp/engineering/).

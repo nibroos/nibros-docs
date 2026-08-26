@@ -35,6 +35,47 @@ const router = useRouter()
 
 const projects = ref([
   {
+    name: 'PR & Merge Runner with SonarQube and AI Review',
+    description: 'How do I gate a pull request on the code it actually changed? A self-hosted Jenkins where one shared pipeline serves every repo, coverage is measured on new code only, and an AI reviews the diff against the team\'s own written standards.',
+    link: '/concepts/pr-merge-runner-sonarqube-jenkins',
+    minutes: '9',
+    posted: 'Aug 23, 2026',
+    techStack: [
+      '/jk-icon.svg',
+      '/sonar-icon.svg',
+      '/docker-icon.svg',
+      '/go-icon.svg',
+      '/nuxt-icon.svg',
+      '/linux-icon.svg',
+    ],
+  },
+  {
+    name: 'Telegram AI PC Controller',
+    description: 'How do I let an AI operate my machine without handing it a shell? The assistant decides what to do; it never decides what is allowed — permission tiers, human approval, and a sandbox that never saw the prompt.',
+    link: '/concepts/telegram-ai-pc-controller',
+    minutes: '8',
+    posted: 'Aug 23, 2026',
+    techStack: [
+      '/go-icon.svg',
+      '/socket-icon.svg',
+      '/docker-icon.svg',
+      '/linux-icon.svg',
+    ],
+  },
+  {
+    name: 'n8n AI Agent with Google Sheets and PostgreSQL',
+    description: 'How do I record finance and inventory by talking to a Telegram bot? The agent never writes SQL — it calls eleven fixed tools, each one SQL function that commits the ledger, the audit row and the sync job atomically.',
+    link: '/concepts/n8n-ai-agent-finance-automation',
+    minutes: '7',
+    posted: 'Aug 23, 2026',
+    techStack: [
+      '/pg-icon.svg',
+      '/node-icon.svg',
+      '/docker-icon.svg',
+      '/js-icon.svg',
+    ],
+  },
+  {
     name: 'Jenkins Essentials',
     description: 'What are the essential steps to set up a Jenkins CI/CD pipeline? This guide covers the installation, configuration, and usage of Jenkins for automating the build, test, and deployment process.',
     link: '/concepts/jenkins-essentials',

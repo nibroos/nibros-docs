@@ -30,6 +30,7 @@ I designed the data model, the request/repository pattern, the money & tax math,
 - **Inventory in/out** with stock movement, stock closing, and an async **stock-sync** worker. → [details](/s-erp/modules/inventory)
 - **Four invoice types** — sales, DP, adjustment, and maintenance — with VAT/PPh23, discounts, DP allocation, and an **email-on-approval** workflow. → [details](/s-erp/modules/invoice-maintenance)
 - A **generic list/filter/paginate pattern** and **Excel/PDF export** shared across all 41 modules. → [details](/s-erp/engineering/list-query-pattern)
+- **Real-time Chat + an AI assistant** that answers from live ERP data through a *provably safe* read-only database boundary (Postgres `NOLOGIN` role + read-only views + a SQL guard). → [details](/s-erp/modules/chat-ai)
 
 See the full set on the [Modules](/s-erp/modules/) page, the [Engineering](/s-erp/engineering/) deep-dives, and the [Resume Highlights](/s-erp/resume-highlights) for résumé-ready bullets.
 
