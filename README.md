@@ -28,6 +28,9 @@ Content changes are just commits to this repo — the site itself is rebuilt and
 3. Deployment happens automatically, via either pipeline configured for this repo:
    - **GitHub Actions** ([.github/workflows/prod.yml](.github/workflows/prod.yml)) — triggers on push to the `prod` branch: installs deps with Bun, runs `bun run docs:build`, archives `docs/.vitepress/dist`, and ships it to the VPS over SSH/SCP.
    - **Jenkins** ([Jenkinsfile](Jenkinsfile)) — clones the repo, installs deps, runs the same build, and `rsync`s `docs/.vitepress/dist/` to the VPS deploy directory.
+   ```
+   sudo rsync -a --delete /home/nibros/projects/nibros-docs/docs/.vitepress/dist/ /var/www/nibros-docs/
+   ```
 4. On the VPS, the Cloudflare Tunnel simply serves whatever static files are currently in the deploy directory — so once the new build lands there, `docs.nibros.space` reflects it immediately, no tunnel/DNS changes needed for normal content updates.
 
 Manual deploy (if you ever need to skip CI): build locally with `bun run docs:build`, then sync `docs/.vitepress/dist/` to the VPS deploy directory yourself (same target the pipelines use).
